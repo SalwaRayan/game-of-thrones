@@ -5,10 +5,12 @@ class Character extends React.Component {
     const { characters, name, title, image } = this.props
 
 		return(
-      <div>
-        <img src={image} />
-			  <p>{name}</p>
-        <p>{title}</p>
+      <div className="card m-3" style={{width: "18rem"}}>
+        <img src={image} className="card-img-top"/>
+			  <div className="card-body text-center">
+          <h3 className="card-title">{name}</h3>
+          <p className="card-text">{title}</p>
+        </div>
       </div>
 		)
 	}
