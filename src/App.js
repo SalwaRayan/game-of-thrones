@@ -13,7 +13,6 @@ class App extends Component {
       activeTab: "Characters",
       characters: [],
       favorites: [],
-      continents: [],
     }
 
     this.handleButtonClick = this.handleButtonClick.bind(this)
@@ -44,16 +43,13 @@ class App extends Component {
         // console.log(result)
         this.setState({ characters: result})
       })
-    fetch("https://thronesapi.com/swagger/index.html?urls.primaryName=Game of Thrones API v2")
-    .then(reponse => reponse.json())
-    .then(result => {
-      // console.log(result)
-      this.setState({ continents: result})
-    })
-    }
+      .catch((error) => {
+        console.log(error)
+      })
+  }
     
     render() {
-      const { characters, activeTab, favorites } = this.state
+      const { characters, activeTab, favorites, } = this.state
      
       return (
 

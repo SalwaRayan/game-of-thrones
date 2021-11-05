@@ -14,7 +14,7 @@ class Character extends React.Component {
 		return(
       <div className="card m-3" style={{width: "18rem"}}>
         <div style={{height:"13rem", overflow: "hidden"}}>
-          <img src={image} className="card-img-top"/>
+          <img src={image} className="card-img-top" />
         </div>
 			  <div className="card-body text-center">
           <h3 className="card-title">{name}</h3>
