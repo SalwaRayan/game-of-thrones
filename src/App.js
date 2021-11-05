@@ -70,8 +70,8 @@ class App extends Component {
             isSelected={activeTab === "Continents"}
             handleClick={this.handleButtonClick}
           />
-          {activeTab === "Characters" && <List favorites={favorites} characters={characters} handleClick={this.handleFavoriteClick}/>}
-          {activeTab === "Favorites" && <List favorites={favorites} characters={favorites} handleClick={this.handleUnfavoriteClick}/>}
+          {activeTab === "Characters" && <List favorites={favorites} characters={characters} handleFClick={this.handleFavoriteClick} handleUClick={this.handleUnfavoriteClick}/>}
+          {activeTab === "Favorites" && <List favorites={favorites} characters={favorites} handleUClick={this.handleUnfavoriteClick}/>}
           {activeTab === "Continents" && <Continents />}
         </div>
     );

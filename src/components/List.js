@@ -4,7 +4,11 @@ import Character from './Character';
 
 class List extends Component {
   render() {
-  const { characters, handleClick, favorites } = this.props
+  const { 
+    characters, 
+    handleFClick, 
+    handleUClick, 
+    favorites } = this.props
 
     return (
       <div className="d-flex flex-wrap">
@@ -15,7 +19,8 @@ class List extends Component {
             name={character.fullName} 
             title={character.title}
             image={character.imageUrl}
-            handleClick={handleClick}
+            handleFClick={handleFClick}
+            handleUClick={handleUClick}
             isFavorite={favorites.find(favorite => favorite.fullName === character.fullName)}
           />
         ))}

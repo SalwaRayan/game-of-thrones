@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 
 class Button extends Component {
   render() {
-    const { handleClick, text, isSelected } = this.props
+    const { 
+      handleClick, 
+      text, 
+      isSelected } = this.props
 
     return (
       <>

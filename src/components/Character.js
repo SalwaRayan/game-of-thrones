@@ -6,7 +6,8 @@ class Character extends React.Component {
       name, 
       title, 
       image,
-      handleClick,
+      handleFClick,
+      handleUClick,
       index,
       isFavorite
     } = this.props
@@ -20,9 +21,9 @@ class Character extends React.Component {
           <h3 className="card-title">{name}</h3>
           <p className="card-text">{title}</p>
           {isFavorite ? (
-            <button className="btn btn-outline-secondary" onClick={() => handleClick(index)}>Remove to Favorites</button>
+            <button className="btn btn-outline-secondary" onClick={() => handleUClick(index)}>Remove from Favorites</button>
           ) : (
-            <button className="btn btn-outline-danger mb-2" onClick={() => handleClick(index)}>Add to Favorites</button>
+            <button className="btn btn-outline-danger mb-2" onClick={() => handleFClick(index)}>Add to Favorites</button>
           )}
         </div>
       </div>
